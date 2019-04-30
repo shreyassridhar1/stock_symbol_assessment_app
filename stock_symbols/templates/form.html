@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <h1 align="center"> Stock Assessment made easy</h1>
+    <meta charset="UTF-8">
+    <title>G-Square Stock Assesment app</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <!--{{form}}<br/><br/>-->
+        Stock-Symbol : {{form.stock_symbol}}<br/><br/>
+        Time Line : {{form.timeline}}<br/><br/>
+        Parameter-Options : {{form.parameter}}<br/><br/>
+        <button type="submit">Submit</button><br/><br/>
+        <div style="display:block;text-align:center">
+        <img src="data:image/png;base64,{{content|safe}}" style="text-align:center">
+        </div>
+        <br/>
+    </form>
+
+</body>
+</html>
